@@ -1,3 +1,5 @@
+ ## Title
+ Hmblogquor
  ## Author
 Hope Mbuthye
 
@@ -11,7 +13,9 @@ A user should an email alert when a new post is made by joining a subscription.
 Register to be allowed to log in to the application
 A user views random quotes on the site
 A writer can create a blog from the application and update or delete blogs I have created.
- # BDD
+ 
+  # BDD
+
 Behaviour	Input	Output
 Load the page	On page load	Get all blogs, Select between signup and login
 Select SignUp	Email,Username,Password	Redirect to login
@@ -29,6 +33,7 @@ cd D-Blog
 pip install -r requirements.txt
 Exporting Configurations
 export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
+
 # Running the application
 python manage.py server
 Testing the application
@@ -37,8 +42,11 @@ Open the application on your browser 127.0.0.1:5000.
 
  # Technology used
 Python3.8
+
 Flask
+
 Heroku
+
  # Known Bugs
 There are no known bugs currently but pull requests are allowed incase you spot a bug
 Contact Information
