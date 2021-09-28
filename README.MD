@@ -29,7 +29,7 @@ To get the code..
  # Cloning the repository:
 https://github.com/hope-mbuthye38/Hmblogquor.git
 Move to the folder and install requirements
-cd D-Blog
+cd hmblog
 pip install -r requirements.txt
 Exporting Configurations
 export SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://{User Name}:{password}@localhost/{database name}
