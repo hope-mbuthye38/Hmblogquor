@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html'%}
+
+{% block content %}
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +12,21 @@
 Blogs on blogs
 <body>
  <h1>Blog categories</h1>
- 
+
+ <ul>
+<li> love affairs</li> 
+<li> Entertainment</li>
+<li> Life issues </li>
+<li> Fashion</li>
+<li> Sports pop</li>
+
+ </ul>  
+
+ <p>Give views on various blogs and your category of choice is appreciated and ranked </p>
+
+ <button> Add Blog</button>
+<button> Comment Blog</button>
+<button> Delete Blog</button>
 </body>
 </html>
+{% endblock %} 
