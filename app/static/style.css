@@ -1,24 +1,24 @@
 .reg{
-    padding: 20px;
+    padding: 22px;
 }
 .account-img {
     height: 250px;
     width: 250px;
-    margin-right: 20px;
+    margin-right: 22px;
     margin-bottom: 16px;
   }
   .landing{
-      margin-top: 2%;
+      margin-top: 2.5%;
   }
   .blog-img{
     height: 80px;
     width: 80px;
-    margin-right: 20px;
+    margin-right: 22px;
 
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
   #usern{
-      margin-left: 20px;
+      margin-left: 22px;
   }
   #form,#profileupdate{
       display: none;
@@ -28,7 +28,7 @@
       padding: 3%;
   }
   #submit{
-      background-color: green;
+      background-color:ghostwhite;
       border-radius: 5px;
   }
   #profbutton,#ref,#subs{
@@ -52,9 +52,9 @@
       border-radius: 6px;
   }
   h1,
-  
+
   h4{
-    font-family: 'El Messiri', sans-serif;
+    font-family: sans-serif;
   }
   .black{
       color: black;
