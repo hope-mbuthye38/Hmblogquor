@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container" style="margin-top: 1%">
+<div class="row">
+  <div class="col-md-4 pict" >
+
+
+    <div class="card testimonial-card">
+        <div class="card-img"  >
+                {% if user.profile_pic_path %}
+                <img src="{{url_for('static',filename=user.profile_pic_path)}}" style="height:300px;border-radius: 1%" class="card-img"  alt="woman avatar">            
+                {%else%}
+                <p>No profile picture</p>
+
+                {% endif %}  
+        </div>
+
+        <div class="card-body">
+            <h5 class="text-center"> {{user.username| capitalize}}</h5>
+            <hr>
+            {% if user.bio %}
+                <p><i class="fas fa-quote-left"></i> {{user.bio}}</p>
+            {%else%}
+            <p> {{user.username| capitalize}} has no bio </p>
+            {% endif %}
+            {% if user == current_user %}
+            <div class="profpic">
+                <div id="updates">
+                  <a href="{{url_for('main.updateprofile',name=user.username)}}">Edit Bio</a>
+                  <button class="btn btn-sm btn-info" id="profbutton">update pic</button>
+                </div>
+
+                <div id="imgform">
+                    <form  action="" method="post" enctype = "multipart/form-data">
+                      <input type="file"  name="photo" class="form-control" required>
+                      <input type="submit" class="btn btn-sm btn-info" id="submit">
+                    </form>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <div class="content-section mt-4">
+              <div class="media">
+                  <img class="rounded-circle account-img" src="{{profile_pic_path}}">
+                  <div class="media-body">
+                      <h2 class="account-heading">{{current_user.username}}</h2>
+                      <p class="text-secondary">{{current_user.email}}</p>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+    <div class="col-md-5" >
+      <button class="btn btn-sm btn-info"><a href="{{url_for('main.new_blog')}}">Post</a></button>
+
+  </div>
+</div>
+</div>
+{% endblock %} 
