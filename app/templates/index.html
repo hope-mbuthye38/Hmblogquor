@@ -32,3 +32,48 @@ Blogs on blogs
 </body>
 </html>
 
+{% extends 'base.html'%}
+{% block content %}
+    <div class="container landing">
+        <div class="row ">
+                {% if current_user.is_authenticated %}
+                <div class="col-md-3 "><a class="btn btn-sm btn-info " id="ref" href="{{url_for('main.new_blog')}}">Post</a></div>
+                {% endif %}
+            
+            <div class="col-md-9 "><h1 >Welcome to hmblogquor</h1></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7">
+            <div class="col-md-7 ">
+                {% for blog in blogs.items %}
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-2 ">
+                                <img class="rounded-circle blog-img mr-10" src="{{ url_for('static', filename='photos/' + blog.user.profile_pic_path) }}">
+                                <p id="usern"><a href="{{url_for('main.user_posts',username = blog.user.username)}}"><span  style="color: blue"><strong>{{blog.user.username | title}}</strong></span> </a> </p> 
+                        </div>
+                        <div class="col-md-6 ml-10">
+                        <div class="col-md-6 ml-10 ">
+                            <p>Posted on : {{blog.posted.strftime('%d-%m-%Y')}}</p>
+                            <h4><a href="{{url_for('main.blog',id = blog.id)}}">{{blog.title | upper}}</a></h4>
+                            <p>{{blog.content}}</p>
+                            <p >{{blog.comment.count()}} Comments</p>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-sm btn-info" id="profbutton">Comment</button>
+                            <form class="form-inline" id="form" action="{{url_for('main.comment',blog_id = blog.id)}}" method="POST">
+                                <div class="md-form form-group">
+                                    <!-- <i class="fa fa-lock prefix"></i> -->
+                                    <label for="form92">Type your comment</label>
+                                    <input type="text"  class="form-control" name ="newcomment" required>
+                                </div>
+                                <div class="md-form form-group">
+                                    <button class="btn btn-sm btn-outline-info" id="submit">Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div> 
+                    <hr>   
+                {% endfor %}
