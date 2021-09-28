@@ -22,7 +22,7 @@ Select SignUp	Email,Username,Password	Redirect to login
 Select Login	Username and password	Redirect to page with blogs that have been posted by writes and be able to subscribe to the blog
 Select comment button	Comment	Form that you input your comment
 Click on submit		Redirect to all comments tamplate with your comment and other comments
-Subscription	Email Address	Flash message "Succesfully subsbribed to D-Blog"
+Subscription	Email Address	Flash message "Succesfully subsbribed to hmblogquor"
 Development Installation
 To get the code..
 
@@ -50,7 +50,7 @@ Heroku
  # Known Bugs
 There are no known bugs currently but pull requests are allowed incase you spot a bug
 Contact Information
-If you have any question or contributions, please email me at [musyokarael38@gmail.com]]
+If you have any question or contributions, please email me at [musyokarael38@gmail.com]
 
  # License
 MIT License:
