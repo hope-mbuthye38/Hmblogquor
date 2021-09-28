@@ -74,6 +74,19 @@ Blogs on blogs
                                 </div>
                             </form>
                         </div>
-                    </div> 
-                    <hr>   
+                    </div>   
                 {% endfor %}
+                <form class="form-inline" action="{{url_for('main.subscribe')}}" method="POST">
+                    <div class="md-form form-group">
+                        <label for="form92">Email Address...</label>
+                        <input type="email"  class="form-control" name ="subscriber" required>
+                    </div>
+                    <div class="md-form form-group">
+                        <button class="btn btn-sm btn-outline-info" id="subs">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
