@@ -35,6 +35,7 @@ Blogs on blogs
 {% extends 'base.html'%}
 {% block content %}
     <div class="container landing">
+     <a class="btn btn-sm btn-info" href="{{url_for('main.new_blog')}}">Post</a>
         <div class="row ">
                 {% if current_user.is_authenticated %}
                 <div class="col-md-3 "><a class="btn btn-sm btn-info " id="ref" href="{{url_for('main.new_blog')}}">Post</a></div>

@@ -1,12 +1,6 @@
 .reg{
     padding: 22px;
 }
-.account-img {
-    height: 250px;
-    width: 250px;
-    margin-right: 22px;
-    margin-bottom: 16px;
-  }
   .landing{
       margin-top: 2.5%;
   }
@@ -66,3 +60,9 @@
     background-color: rgba(255, 255, 255, 0.924);  
     color: blueviolet;
 }
+.account-img {
+    height: 160px;
+    width: 160px;
+    margin-right: 22px;
+    margin-bottom: 18px;
+  } 
